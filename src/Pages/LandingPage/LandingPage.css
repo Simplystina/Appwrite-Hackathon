@@ -13,6 +13,11 @@
     margin: 5rem 0 0 0;
 }
 
+.landingpage-inner-contents-btn{
+
+    color: #000;
+}
+
 .landingpage-inner-contents h1{
     font-size: 50px;
     font-family: var(--headingFont);

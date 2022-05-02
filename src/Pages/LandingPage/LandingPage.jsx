@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './LandingPage.css'
 import logo from '../../images/logo.svg'
 import main from '../../images/main.svg'
 import { Link } from 'react-router-dom'
+import { UserContext } from '../../context/user/userContext'
+import {  logOutUser } from '../../Services/connectApi'
+
 const LandingPage = () => {
+  const user = useContext(UserContext)
+
+  const onClickLogOut = async () => {
+    try{
+      await logOutUser()
+    }
+    catch(err){
+      console.log(err)
+    }
+    
+  }
+  
+
   return (
     <div className='landingpage-container'>
       <nav className='landingpage-navbar'><img src={logo} alt='logo'></img></nav>
@@ -14,10 +30,16 @@ const LandingPage = () => {
                   till forever. Interested in keeping track of your applications?
                   Click the link below to get started.
               </p>
-              <Link className='btn' to='/login'>Login/Register</Link>
+             { user?(
+                <>
+                     <h2>Welcome to Jobster {user.name}</h2>
+                     <button className='btn landingpage-inner-contents-btn' onClick={()=> onClickLogOut() }>Logout</button>
+                </>
+             )
+             : <Link className='btn landingpage-inner-contents-btn' to='/login'>Login/Register</Link>}
           </div>
           <div>
-              <img src={main} alt='image'></img>
+              <img src={main} alt='hero'></img>
           </div>
       </div>
     </div>
