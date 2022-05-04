@@ -7,6 +7,7 @@ import logo from '../../images/TRACKER.png'
 import googleIcon from '../../images/google-icon.png'
 import star from '../../images/star2.png'
 import {signInuser, signUpUser, signUpWithGoogle } from '../../Services/connectApi';
+import Users from '../../images/Users.png'
 // import {BsEyeFill } from 'react-icons/bs'
 
 const intialState = {
@@ -116,6 +117,10 @@ const Register = () => {
             <img src={star} alt='star'/>
             <h2>Easily keep track of all jobs applications</h2>
             <p>Create an account to save your jobs applications and easily get notified to apply to them. Never miss a job or interview!</p>
+            <div className='users'>
+                <img src={Users}/>
+                <p>Join 1,000+ users</p>
+            </div>
         </div>
     </div>
     </>

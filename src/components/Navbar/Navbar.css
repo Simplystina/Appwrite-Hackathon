@@ -1,0 +1,48 @@
+.navbar-container{
+    transition: all linear 2s !important;
+    background-color: white;
+    box-shadow: var(--light-shadow);
+    transition: 2s linear;
+    padding: 10px;
+    margin-left: 14rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-icon{
+    height: 30px;
+    width: 30px;
+    color: rgba(15, 71, 240, 0.696);
+    
+}
+
+.navbar-container h2{
+    font-family: Volkhov;
+    font-weight: 600;
+    font-size: 25px;
+}
+.user-btn{
+    height: 2.5rem;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+
+  .user-btn p{
+      font-size: 18px;
+      font-family: Inter;
+      padding: 20px 10px 0 10px;
+      font-weight: 500;
+  }
+.user-img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-icon{
+    margin-bottom:5px;
+}
+

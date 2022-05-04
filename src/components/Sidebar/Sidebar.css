@@ -1,0 +1,47 @@
+.side-bar{
+    width: 14rem;
+    height: 100vh;
+    background-color: #ffff;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+     transition: all 0.5s linear;
+  }
+  .sidebar-logo{
+    margin: 20px 70px 40px 50px;
+    width: 5rem;
+  }
+  
+  .sidebar-links{
+    
+  }
+  li{
+    padding: 10px 44px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: Inter;
+    color: #5C6578;
+    cursor: pointer;
+    transition: all 0.6s linear;
+    font-weight: 500;
+    
+  }
+  
+  .links-icon{
+    font-size: 25px;
+    margin-right: 15px;
+    transition: all 0.3s linear;
+  }
+  
+  li:hover{
+     background:#f0f4f8 ;
+    
+  }
+  
+  li:hover .links-icon{
+    color: rgba(27, 78, 231, 0.776);
+    margin-left: 15px;
+  }
