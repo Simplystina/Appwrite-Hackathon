@@ -5,8 +5,8 @@ import { Appwrite } from 'appwrite'
 
 const sdk = new Appwrite ();
 
-sdk.setEndpoint('http://localhost/v1') // Your Appwrite Endpoint
-    .setProject('626fef7629ee6b43cfdc') // Your project ID
+sdk.setEndpoint('https://tracker.myappwriteinstance.me/v1') // Your Appwrite Endpoint
+    .setProject('6274251348c57f1f5322') // Your project ID
 ;
 
 
