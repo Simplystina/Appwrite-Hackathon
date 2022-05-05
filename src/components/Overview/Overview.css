@@ -25,6 +25,7 @@
 .overview-stats{
     background-color: white;
     padding: 10px 20px;
+    
 }
 .overview-stats-container >div:first-child{
     border-top-left-radius: 10px;
@@ -102,6 +103,7 @@
     background-color: white;
     border-radius: 5px;
     padding: 10px;
+    width: 100%;
 
 }
 .overview-topjob-content span{
@@ -135,4 +137,8 @@
     font-size: 14px;
     font-family: Inter;
     margin-top: -15px;
+}
+.arrow-right{
+    margin-left: auto;
+    margin-top: 10px;
 }

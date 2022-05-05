@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Overview.css'
 import {FiArrowUpRight, FiArrowDownRight} from 'react-icons/fi'
 import {FaTwitch, FaSlack, FaDropbox} from 'react-icons/fa'
 import {RiArrowRightSLine} from 'react-icons/ri'
+import { BarChart } from '../Index'
 
 
 const Overview = () => {
+
+  const [isApplyEmpty, setIsApplyEmpty] = useState(true) //displays chart only when application list is not empty
   return (
     <div className='dashboard-overview'>
        <h2 className='overview-text'>Overview</h2>
@@ -46,6 +49,7 @@ const Overview = () => {
                    <h2>Product management</h2>
                    <p>24th May 2022</p>
                </div>
+               <RiArrowRightSLine className='arrow-right'/>
            </div>
            <div className='overview-topjob-content'>
                <span><FaSlack className='overview-topjob-icon'/> </span>
@@ -53,6 +57,7 @@ const Overview = () => {
                    <h2>Frontend Developer</h2>
                    <p>16th May 2022</p>
                </div>
+               <RiArrowRightSLine className='arrow-right'/>
            </div>
            <div className='overview-topjob-content'>
                <span><FaDropbox className='overview-topjob-icon'/> </span>
@@ -60,11 +65,11 @@ const Overview = () => {
                    <h2>Devops Engineer</h2>
                    <p>18th May 2022</p>
                </div>
+               <div className='arrow-right'><RiArrowRightSLine /></div>
            </div>
        </div>
-       <div className='overview-heading2'>
-           <h2>Monthly Applications</h2>
-       </div>
+      {isApplyEmpty && <BarChart/>}
+       
 
     </div>
   )
