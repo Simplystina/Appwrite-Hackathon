@@ -8,7 +8,7 @@ import { BarChart } from '../Index'
 
 const Overview = () => {
 
-  const [isApplyEmpty, setIsApplyEmpty] = useState(true) //displays chart only when application list is not empty
+  const [isApplicationEmpty, setIsApplicationEmpty] = useState(true) //displays chart only when application list is not empty
   return (
     <div className='dashboard-overview'>
        <h2 className='overview-text'>Overview</h2>
@@ -68,7 +68,7 @@ const Overview = () => {
                <div className='arrow-right'><RiArrowRightSLine /></div>
            </div>
        </div>
-      {isApplyEmpty && <BarChart/>}
+      {isApplicationEmpty && <BarChart/>}
        
 
     </div>

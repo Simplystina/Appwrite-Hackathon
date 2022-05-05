@@ -21,7 +21,7 @@ const BarChart = () => {
   return (
     <div className='chart'>
         <h2>Monthly Applications</h2>
-      <div style={{ maxWidth: "100%" }}>
+      <div className='chart-container'>
         <Bar
           data={{
             // Name of the variables on x-axies for each bar

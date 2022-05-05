@@ -45,3 +45,8 @@
     color: rgba(27, 78, 231, 0.776);
     margin-left: 15px;
   }
+
+  .logout{
+    margin-top: 7rem;
+    color: #FF3D00;
+  }
