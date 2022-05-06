@@ -35,7 +35,7 @@ export const signInuser = async (email, password) => await account.createSession
 //function for user signup
 export const signUpUser = async (name, email, password) => {
     await account.create('unique()',email,password,name)
-    await account.createSession(email,password)
+    
 }
 
 

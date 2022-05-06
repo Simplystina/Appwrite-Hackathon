@@ -19,7 +19,7 @@ const UserProvider = ({children})=>{
         }catch(err){
             if(err.code === 401){
                 setUser(null)
-                navigate('/login')
+                
             }
         }
         }

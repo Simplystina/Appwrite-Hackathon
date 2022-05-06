@@ -1,14 +1,16 @@
 import React, {  useReducer } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './Register.css'
-// import {toast, ToastContainer} from 'react-toastify'
+import {toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '../../images/TRACKER.png'
 import googleIcon from '../../images/google-icon.png'
 import star from '../../images/star2.png'
 import {signInuser, signUpUser, signUpWithGoogle } from '../../Services/connectApi';
 import Users from '../../images/Users.png'
-// import {BsEyeFill } from 'react-icons/bs'
+import validator from 'validator'
+
+
 
 const intialState = {
     name:'',
@@ -42,7 +44,8 @@ const reducer = (state=intialState,action={}) => {
 
 const Register = () => {
     
-    const [state,dispatch] =useReducer(reducer,intialState)
+    
+    const [state,dispatch] = useReducer(reducer,intialState)
     const navigate= useNavigate()
 
     const {name,email,password,registeredStatus} = state
@@ -57,30 +60,45 @@ const Register = () => {
 
   
     const submitForm = async (e)=>{
-        e.preventDefault()
-        if (registeredStatus){
+        if (registeredStatus && email && password) {
+            if (!validator.isEmail(email)) { toast.warning("Please enter a valid email")}
+            if (password.length < 8) {return toast.warning("Password should be upto 8 characters") }
+            
             try{
-            await signInuser(email,password)
+                const response = await signInuser(email,password)
+                navigate('/dashboard')
             }catch(error){
+                toast.error('Invalid credentials')
                 console.log(error)
-            }finally{
-                return navigate('/')
             }
-        }
+        }else if(!registeredStatus && email && password && name){
 
-        try{
-            await signUpUser(name,email,password)
-        } catch(error){
-            console.log(error)
-        }finally{
-            navigate('/')
+            if (!validator.isEmail(email)) {toast.warning("Please enter a valid email")}
+            if (password.length < 8) { return toast.warning("Password should be upto 8 characters") }
+
+            try{
+                await signUpUser(name,email,password)
+                toast.success("Registration Successful")
+                dispatch({
+                    type: "status"})
+            } catch(error){
+                console.log(error,"erorrrrrr")
+                toast.error("Account already exist")
+            }
+        }else{
+            toast.error("Please fill all the fields!")
         }
-        }
+        
+        e.preventDefault()
+        
+    }
     
 
     
   return (
     <>
+    <ToastContainer 
+        autoClose={2000} position="top-center"/>
      <div className="registration-container" >
         <div className='content1'>
            <img src={logo} alt="logo" className='logo'/>
@@ -109,7 +127,7 @@ const Register = () => {
                 />
             </form>
             <button onClick={(e)=> submitForm(e)} className='btn submit-btn'>submit</button>
-            <button className='btn googleSignin'  onClick={(e)=> {e.preventDefault(); signUpWithGoogle()}}> <img className='google-icon' src={googleIcon} alt='google icon'/> signup with google
+            <button className='btn googleSignin'  onClick={(e)=> {e.preventDefault(); signUpWithGoogle()}}> <img className='google-icon' src={googleIcon} alt='google icon'/> {registeredStatus? "signin with google": "sign up with google" } 
             </button>
             <p className='reg-status'>{registeredStatus?"Don't have an account?" :'Already have an account?'} <span onClick={()=> dispatch({type: 'status'})}>{registeredStatus?'Sign up' :'Sign in'}</span></p>
         </div>

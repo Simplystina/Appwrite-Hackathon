@@ -6,8 +6,27 @@ import {MdQueryStats,MdOutlinePostAdd} from 'react-icons/md'
 import {ImProfile} from 'react-icons/im'
 import {BiLogOut} from 'react-icons/bi'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { UserContext } from '../../context/user/userContext'
+import { logOutUser } from '../../Services/connectApi'
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+
+
+  const navigate = useNavigate()
+  const user = useContext(UserContext)
+
+  const onClickLogOut = async () => {
+    try{
+      await logOutUser()
+      navigate('/')
+    }
+    catch(err){
+      console.log(err)
+    }
+    
+  }
   return (
    <aside className='side-bar'>
        <img className='sidebar-logo' src={logo} alt='logo'></img>
@@ -16,7 +35,7 @@ const Sidebar = () => {
           <Link to='/'><li> <MdQueryStats className='links-icon'/>  Applications </li></Link>
           <Link to='/'><li> <MdOutlinePostAdd className='links-icon'/> Feeds </li></Link>
           <Link to='/'><li> <ImProfile className='links-icon' />Account</li></Link>
-          <Link to='/'><li className='logout'> <BiLogOut className='links-icon' />logout</li></Link>
+          <li onClick={onClickLogOut} className='logout'> <BiLogOut className='links-icon' />logout</li>
        </ul>
     </aside>
   )
