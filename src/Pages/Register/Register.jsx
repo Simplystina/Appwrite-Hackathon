@@ -64,7 +64,7 @@ const Register = () => {
             }catch(error){
                 console.log(error)
             }finally{
-                return navigate('/')
+                return navigate('/dashboard')
             }
         }
 
@@ -73,10 +73,14 @@ const Register = () => {
         } catch(error){
             console.log(error)
         }finally{
-            navigate('/')
+            navigate('/dashboard')
         }
         }
     
+        const handleSignUpWithGoogle = async (e)=>{
+            e.preventDefault()
+           await signUpWithGoogle()
+        }
 
     
   return (
@@ -109,7 +113,7 @@ const Register = () => {
                 />
             </form>
             <button onClick={(e)=> submitForm(e)} className='btn submit-btn'>submit</button>
-            <button className='btn googleSignin'  onClick={(e)=> {e.preventDefault(); signUpWithGoogle()}}> <img className='google-icon' src={googleIcon} alt='google icon'/> signup with google
+            <button className='btn googleSignin'  onClick={(e)=> handleSignUpWithGoogle(e)}> <img className='google-icon' src={googleIcon} alt='google icon'/> signup with google
             </button>
             <p className='reg-status'>{registeredStatus?"Don't have an account?" :'Already have an account?'} <span onClick={()=> dispatch({type: 'status'})}>{registeredStatus?'Sign up' :'Sign in'}</span></p>
         </div>
@@ -118,7 +122,7 @@ const Register = () => {
             <h2>Easily keep track of all jobs applications</h2>
             <p>Create an account to save your jobs applications and easily get notified to apply to them. Never miss a job or interview!</p>
             <div className='users'>
-                <img src={Users}/>
+                <img src={Users} alt='user images'/>
                 <p>Join 1,000+ users</p>
             </div>
         </div>
