@@ -1,16 +1,18 @@
 import React from 'react'
 import './Dashboard.css'
-import { Sidebar, Navbar, Overview } from '../../components/Index'
+import { Sidebar, Navbar } from '../../components/Index'
 import {Navigate} from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const Dashboard = () => {
   const token = localStorage.getItem("auth_state")
   return (<>{
     
 token ? (<div>
-            <Navbar/>
+             <Navbar/>
             <Sidebar/>
-            <Overview/>
+         
+             <Outlet/>
         </div>):<Navigate to='/login'/>
 
   }</>)

@@ -1,14 +1,9 @@
 import React from 'react'
-import { Sidebar,Navbar, ProfileUpdate } from '../../components/Index'
+import {  ProfileUpdate } from '../../components/Index'
 
 const AccountProfile = () => {
   return (
-    <>
-    
-    <Sidebar/>
-    <Navbar/>
-    <ProfileUpdate/>
-    </>
+      <ProfileUpdate/>
   )
 }
 

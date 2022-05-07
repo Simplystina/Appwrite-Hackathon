@@ -28,7 +28,7 @@ const LandingPage = () => {
               { user?(
                   <>
                       <h2>Welcome to Jobster {user.name}</h2>
-                      <Link className='btn landingpage-inner-contents-btn' to='/dashboard/overview'>View Dashboard</Link>
+                      <Link className='btn landingpage-inner-contents-btn' to='/dashboard'>View Dashboard</Link>
                   </>
               )
               : <Link className='btn landingpage-inner-contents-btn' to='/login'>Login/Register</Link>}

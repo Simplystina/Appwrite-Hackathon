@@ -66,13 +66,12 @@ const Register = () => {
             
             try{
                  await signInuser(email,password)
-                navigate('/dashboard/overview')
             }catch(error){
                 toast.error('Invalid credentials')
                 console.log(error)
             }
             finally{
-                return navigate('/dashboard/overview')
+                return navigate('/dashboard')
             }
         }else if(!registeredStatus && email && password && name){
 
@@ -82,7 +81,7 @@ const Register = () => {
             try{
                 await signUpUser(name,email,password)
                 toast.success("Registration Successful")
-                navigate('/dashboard/overview')
+                navigate('/dashboard')
                 dispatch({
                     type: "status"})
             } catch(error){
@@ -100,7 +99,6 @@ const Register = () => {
         const handleSignUpWithGoogle = async (e)=>{
             e.preventDefault()
            await signUpWithGoogle()
-         
         }
 
     

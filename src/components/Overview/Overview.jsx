@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect} from 'react'
 import './Overview.css'
 import {FiArrowUpRight, FiArrowDownRight} from 'react-icons/fi'
 import {FaTwitch, FaSlack, FaDropbox} from 'react-icons/fa'
@@ -9,8 +9,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import SkeletonComponent from '../Skeleton/skeletonComponent'
 
 
+
 const Overview = () => {
-   
+  
+
   const [isApplicationEmpty, setIsApplicationEmpty] = useState(true) //displays chart only when application list is not empty
 
   useEffect(() =>{
@@ -26,7 +28,6 @@ const Overview = () => {
   return (
     <div className='dashboard-overview'>
          {/* <ToastContainer autoClose={2000} position="top-center" /> */}
-       <h2 className='overview-text'>Overview</h2>
       {isApplicationEmpty? <SkeletonComponent/>:(
       <><h2 className='overview-text'>Overview</h2>
        <div className='overview-stats-container'>
