@@ -1,20 +1,34 @@
-import React, {useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './Overview.css'
 import {FiArrowUpRight, FiArrowDownRight} from 'react-icons/fi'
 import {FaTwitch, FaSlack, FaDropbox} from 'react-icons/fa'
 import {RiArrowRightSLine} from 'react-icons/ri'
 import { BarChart } from '../Index'
-import {toast, ToastContainer} from 'react-toastify'
+// import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import SkeletonComponent from '../Skeleton/skeletonComponent'
 
 
 const Overview = () => {
    
   const [isApplicationEmpty, setIsApplicationEmpty] = useState(true) //displays chart only when application list is not empty
+
+  useEffect(() =>{
+   
+    setTimeout(()=>{
+        setIsApplicationEmpty(false)
+    },4000)
+
+
+  })
+
+
   return (
     <div className='dashboard-overview'>
-         <ToastContainer autoClose={2000} position="top-center" />
+         {/* <ToastContainer autoClose={2000} position="top-center" /> */}
        <h2 className='overview-text'>Overview</h2>
+      {isApplicationEmpty? <SkeletonComponent/>:(
+      <><h2 className='overview-text'>Overview</h2>
        <div className='overview-stats-container'>
            <div className='overview-stats'>
                <span className='overview-stats-count'>54</span>
@@ -70,10 +84,9 @@ const Overview = () => {
                </div>
                <div className='arrow-right'><RiArrowRightSLine /></div>
            </div>
-       </div>
-      {isApplicationEmpty && <BarChart/>}
-       
-
+  </div>
+  <BarChart/></>)
+}
     </div>
   )
 }

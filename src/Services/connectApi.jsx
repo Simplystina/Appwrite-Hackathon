@@ -3,6 +3,7 @@ import { Appwrite } from 'appwrite'
 
 
 
+
 const sdk = new Appwrite ();
 
 sdk.setEndpoint('https://tracker.myappwriteinstance.me/v1') // Your Appwrite Endpoint
@@ -10,8 +11,10 @@ sdk.setEndpoint('https://tracker.myappwriteinstance.me/v1') // Your Appwrite End
 ;
 
 
-//account instance
+//account instances
 export const account = sdk.account
+//database instances
+export const database = sdk.database
 
 
 
@@ -23,19 +26,32 @@ export const getCurrentUser = async () => {
 
 
 //logging user out 
-export const logOutUser = async () =>  await account.deleteSession('current')
+export const logOutUser = async () =>  {
+    try{
+        await account.deleteSession('current')
+        localStorage.removeItem('auth_state')
+    }catch(err){
+        console.log(err)
+    }
+
+}
      
 
 
 //funtion for signing user with email and password
-export const signInuser = async (email, password) => await account.createSession(email,password)
+export const signInuser = async (email, password) => {
+    await account.createSession(email,password)
+    localStorage.setItem('auth_state', 1)
+}
 
 
 
 //function for user signup
 export const signUpUser = async (name, email, password) => {
-    await account.create('unique()',email,password,name)
     
+   await account.create('unique()',email,password,name)
+    await account.createSession(email,password)
+    localStorage.setItem('auth_state', 1)
 }
 
 
@@ -43,15 +59,14 @@ export const signUpUser = async (name, email, password) => {
 //function for authenticating with google
 export const signUpWithGoogle = async () =>{
     try{
-       const response =  await account.createOAuth2Session('google', 'http://localhost:3000','http://localhost:3000/login');
-       
+        await account.createOAuth2Session('google', 'http://localhost:3000/dashboard','http://localhost:3000/login');
+        localStorage.setItem('auth_state', 1)
     }
     catch(e){
         console.log(e, "erorrrrrrrrr")
         //console.error(e)
     }
 }
-
 
 export default sdk
 
