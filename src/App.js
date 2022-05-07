@@ -3,10 +3,7 @@ import { Routes, Route, BrowserRouter as Router} from 'react-router-dom'
 import { LandingPage, Register, Dashboard, Applications, Feeds, AccountProfile} from './Pages/index'
 import './index.css'
 import UserProvider from './context/user/userContext';
-
-
 function App() {
-
   return (
     <> 
     <Router>

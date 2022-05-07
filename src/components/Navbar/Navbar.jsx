@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import {AiOutlineMenuUnfold, AiFillCaretDown} from 'react-icons/ai'
-import {BsPersonCircle} from 'react-icons/bs'
+// import {BsPersonCircle} from 'react-icons/bs'
 import person from '../../images/person.png'
 
 const Navbar = () => {

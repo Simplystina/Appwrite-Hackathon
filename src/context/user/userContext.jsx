@@ -1,36 +1,38 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { getCurrentUser} from '../../Services/connectApi';
-import {useNavigate} from 'react-router-dom'
+import {  getCurrentUser} from '../../Services/connectApi';
 
 
 
-export const UserContext = createContext(null)
+
+export const UserContext = createContext({user:null,isLoading:true});
+
+
+
 
 
 const UserProvider = ({children})=>{
     const [user, setUser] = useState(null)
-    const navigate = useNavigate()
+    const [isLoading, setIsLoading] = useState(true)
+
+
 
     useEffect(()=>{
-    const registerUserSession = async()=>{
-        try{
-            const newUser = await getCurrentUser()
-            if (newUser) setUser(newUser);
-        }catch(err){
-            if(err.code === 401){
-                setUser(null)
-                
-            }
-        }
-        }
+      const registerUserSession = async() =>{
+            try {
+                const newUser = await getCurrentUser()
+                    setUser(newUser)
+                    setIsLoading(false)
+                }  catch(err){
+                    if(err.code === 401){
+                        setUser(null)
+                    }
+                }
+    }
          registerUserSession()
-      
-    },[user,setUser,navigate])
+    },[])
 
 return (
-
-    <UserContext.Provider value={user}>{children}</UserContext.Provider>
-
+    <UserContext.Provider value={{user,isLoading}}>{children}</UserContext.Provider>
 )
 
 

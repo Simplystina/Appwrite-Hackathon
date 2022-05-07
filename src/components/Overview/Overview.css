@@ -14,17 +14,16 @@
 .overview-stats-container{
     width: 100%;
     padding: 20px 0px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 1px;
-    margin: 0 auto;
-
+    display: flex;
 }
 
 .overview-stats{
     background-color: white;
     padding: 10px 20px;
-    
+    flex: 1;
+}
+.overview-stats:not(:first-child){
+    border-left: 1px solid #eee;
 }
 .overview-stats-container >div:first-child{
     border-top-left-radius: 10px;
