@@ -31,10 +31,10 @@ const Sidebar = () => {
    <aside className='side-bar'>
        <img className='sidebar-logo' src={logo} alt='logo'></img>
        <ul className='sidebar-links'>
-          <Link to='/'><li> <IoMdStats className='links-icon'/> Overview</li></Link>
-          <Link to='/'><li> <MdQueryStats className='links-icon'/>  Applications </li></Link>
-          <Link to='/'><li> <MdOutlinePostAdd className='links-icon'/> Feeds </li></Link>
-          <Link to='/'><li> <ImProfile className='links-icon' />Account</li></Link>
+          <Link to='/dashboard'><li> <IoMdStats className='links-icon'/> Overview</li></Link>
+          <Link to='/dashboard/applications'><li> <MdQueryStats className='links-icon'/>  Applications </li></Link>
+          <Link to='/dashboard/feeds'><li> <MdOutlinePostAdd className='links-icon'/> Feeds </li></Link>
+          <Link to='/dashboard/account'><li> <ImProfile className='links-icon' />Account</li></Link>
           <li onClick={onClickLogOut} className='logout'> <BiLogOut className='links-icon' />logout</li>
        </ul>
     </aside>

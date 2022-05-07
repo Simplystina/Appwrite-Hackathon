@@ -3,11 +3,8 @@ import './LandingPage.css'
 import logo from '../../images/logo.svg'
 import main from '../../images/main.svg'
 import { Link } from 'react-router-dom'
-import { UserContext } from '../../context/user/userContext'
-
 
 const LandingPage = () => {
-  const user = useContext(UserContext)
 
   
   

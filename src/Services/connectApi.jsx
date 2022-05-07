@@ -43,10 +43,12 @@ export const signUpUser = async (name, email, password) => {
 //function for authenticating with google
 export const signUpWithGoogle = async () =>{
     try{
-        await account.createOAuth2Session('google', 'http://localhost:3000','http://localhost:3000/login');
+       const response =  await account.createOAuth2Session('google', 'http://localhost:3000','http://localhost:3000/login');
+       
     }
     catch(e){
-        console.error(e)
+        console.log(e, "erorrrrrrrrr")
+        //console.error(e)
     }
 }
 

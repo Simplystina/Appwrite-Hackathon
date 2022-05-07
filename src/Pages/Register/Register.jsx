@@ -5,7 +5,7 @@ import {toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '../../images/TRACKER.png'
 import googleIcon from '../../images/google-icon.png'
-import star from '../../images/star2.png'
+import star from '../../images/Stars.png'
 import {signInuser, signUpUser, signUpWithGoogle } from '../../Services/connectApi';
 import Users from '../../images/Users.png'
 import validator from 'validator'
