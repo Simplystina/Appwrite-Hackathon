@@ -17,7 +17,7 @@ const Overview = () => {
    
     setTimeout(()=>{
         setIsApplicationEmpty(false)
-    },4000)
+    },1000)
 
 
   })
