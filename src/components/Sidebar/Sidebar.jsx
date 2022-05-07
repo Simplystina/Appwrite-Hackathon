@@ -5,7 +5,7 @@ import {IoMdStats} from 'react-icons/io'
 import {MdQueryStats,MdOutlinePostAdd} from 'react-icons/md'
 import {ImProfile} from 'react-icons/im'
 import {BiLogOut} from 'react-icons/bi'
-import { Link } from 'react-router-dom'
+import { Link, NavLink} from 'react-router-dom'
 import { useContext } from 'react'
 import { UserContext } from '../../context/user/userContext'
 import { logOutUser } from '../../Services/connectApi'
@@ -31,10 +31,10 @@ const Sidebar = () => {
    <aside className='side-bar'>
        <img className='sidebar-logo' src={logo} alt='logo'></img>
        <ul className='sidebar-links'>
-          <Link to='/dashboard'><li> <IoMdStats className='links-icon'/> Overview</li></Link>
-          <Link to='/dashboard/applications'><li> <MdQueryStats className='links-icon'/>  Applications </li></Link>
-          <Link to='/dashboard/feeds'><li> <MdOutlinePostAdd className='links-icon'/> Feeds </li></Link>
-          <Link to='/dashboard/account'><li> <ImProfile className='links-icon' />Account</li></Link>
+          <li> <NavLink className="nav-links" to='/dashboard/overview' style={({ isActive }) => ({ background: isActive ? "rgb(54, 77, 217)" : "none" , color: isActive? 'white':"#5C6578"})}><IoMdStats className='links-icon'/> Overview</NavLink></li>
+          <li><NavLink className="nav-links" to='/dashboard/applications' style={({ isActive }) => ({ background: isActive ? "#364DD9" : "none" ,color: isActive? 'white':"#5C6578"})}><MdQueryStats className='links-icon'/>  Applications</NavLink></li>
+          <li><NavLink className="nav-links" to='/dashboard/feeds' style={({ isActive }) => ({ background: isActive ? "#364DD9" : "none",color: isActive? 'white':"#5C6578" })}> <MdOutlinePostAdd className='links-icon'/> Feeds</NavLink></li>
+          <li><NavLink className="nav-links" to='/dashboard/account' style={({ isActive }) => ({ background: isActive ? "#364DD9" : "none",color: isActive? 'white':"#5C6578" })}><ImProfile className='links-icon' />Account</NavLink></li>
           <li onClick={onClickLogOut} className='logout'> <BiLogOut className='links-icon' />logout</li>
        </ul>
     </aside>
