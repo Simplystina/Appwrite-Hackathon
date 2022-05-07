@@ -11,7 +11,7 @@ function App() {
           <Routes>
             <Route exact={true} path='/' element={<UserProvider><LandingPage/></UserProvider>}></Route>
             <Route exact={true} path='/login' element={<Register/>}></Route>
-            <Route exact={true} path='/dashboard' element={<Dashboard/>}></Route>
+            <Route exact={true} path='/dashboard/overview' element={<Dashboard/>}></Route>
             <Route exact={true} path='/dashboard/applications' element={<Applications/>}></Route>
             <Route exact={true} path='/dashboard/feeds' element={<Feeds/>}></Route>
             <Route exact={true} path='/dashboard/account' element={<AccountProfile/>}></Route>
