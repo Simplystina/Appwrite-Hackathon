@@ -1,34 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Dashboard.css'
-import { Sidebar, Navbar, Overview } from '../../components/Index'
-import { getCurrentUser } from '../../Services/connectApi'
-import { useNavigate } from 'react-router-dom'
-
+import { Sidebar, Navbar } from '../../components/Index'
+import {Navigate} from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const Dashboard = () => {
-
-    const navigate = useNavigate()
-   
+  const token = localStorage.getItem("auth_state")
+  return (<>{
     
-    useEffect(()=>{
-        let userToken = getCurrentUser()
-        userToken.then(function(result){
-           console.log(result)
-           
-           
-        }).catch((err)=>navigate('/'))
-    },[])
+token ? (<div>
+             <Navbar/>
+            <Sidebar/>
+         
+             <Outlet/>
+        </div>):<Navigate to='/login'/>
 
+  }</>)
    
-
-    
-  return (
-    <div>
-      <Navbar/>
-      <Sidebar/>
-      <Overview/>
-    </div>
-  )
 }
 
-export default Dashboard
+export default Dashboard 

@@ -1,11 +1,9 @@
 import React from 'react'
-import { Sidebar,Navbar, FeedsContent } from '../../components/Index'
+import { FeedsContent } from '../../components/Index'
 
 const Feeds = () => {
   return (
     <>
-    <Navbar/>
-    <Sidebar/>
     <FeedsContent/>
     </>
   )
