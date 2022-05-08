@@ -11,7 +11,7 @@
 }
 .profile-inner-container{
     box-shadow: var(--shadow-4);
-    margin: 80px;
+    margin: 50px;
     padding: 20px;
     background-color: white;
 }

@@ -1,0 +1,239 @@
+.application_content_container{
+    background-color: #f0f4f8;
+    margin-left: 14rem;
+    padding: 20px 30px;
+    height: 100%;
+    
+}
+.application_content_heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #364DD9;
+    cursor: pointer;
+    margin: 20px 0;
+}
+.application_content_heading h4{
+    font-size: 18px;
+    font-family: Inter;
+    margin: 0;
+    padding: 5px;
+}
+.application_content_heading span{
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s linear;
+    
+}
+.content-heading1{
+    border-right: 1px solid black;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    padding: 0;
+    margin: 0;
+}
+.content-heading2{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 0;
+    margin: 0;
+}
+
+.application_search_container{
+    background-color: white;
+    margin: 30px auto;
+    border-radius: 7px;
+    line-height: 0;
+    padding: 2px;
+    box-shadow: var(--shadow-3);
+    transition: all 0.5s linear;
+}
+.application_form_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0px 30px;
+    padding: 10px 30px;
+    transition: all 0.5s linear;
+    
+}
+.display-searchfield{
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.5s linear;
+}
+.display-searchfield h4{
+    font-size: 20px;
+    font-family: Inter;
+    color: #364DD9;
+    font-weight: 700;
+}
+.search-icon{
+    color: #364DD9;
+    font-weight: 700;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+   
+}
+.form label{
+    font-size: 16px !important;
+    margin-bottom: 0.6rem;
+    font-family: Inter;
+    font-weight: 700;
+}
+.form input{
+    outline: none;
+    padding: 15px;
+    border: 1px solid #D0D5DD;
+    border-radius: 4px;
+    background-color: #f0f4f8;
+}
+
+.form select{
+    outline: none;
+    padding: 9px;
+    border: 1px solid #D0D5DD;
+    border-radius: 4px;
+    background-color: #f0f4f8;
+}
+
+.form option{
+    padding: 10px !important;
+   font-size: 16px;
+   background-color: #f0f4f8;
+   font-family: Inter;
+}
+.filter-btn{
+    outline: none;
+    border: none;
+    background-color: rgb(220, 89, 89);
+    margin: 23px 0 12px 0;
+    border-radius: 3px;
+    color: white;
+    
+}
+
+/** Add Application **/
+.add-application-container{
+    background-color: white;
+    margin: 30px auto;
+    border-radius: 7px;
+    line-height: 0;
+    padding: 2px;
+    box-shadow: var(--shadow-3);
+    transition: all 0.5s linear;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0px 30px;
+    padding: 30px;
+    transition: all 0.5s linear;
+    
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.btn-container button{
+    padding: 10px 50px;
+    font-size: 16px;
+    font-family: Inter;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.clear-btn{
+    margin: 10px;
+    background-color: #D0D5DD;
+}
+.submit-job-btn{
+    background-color: #364DD9;
+    color: white;
+}
+
+.add-application-text{
+    font-size: 20px;
+    font-family: Inter;
+    margin: 0;
+    padding: 10px;
+}
+
+/*** New Application Container ******/
+.new-applications-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 50px;
+}
+
+.new-application{
+    background-color: white;
+}
+.new-application-heading{
+    display: flex;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 0.0001rem solid #D0D5DD;
+    font-family: Inter;
+}
+.first_letter_container{
+    border-radius: 6px;
+    background-color: #1d7cdae2;
+    padding: 10px 30px 0 30px;
+    color: white;
+   
+}
+.application-title-container{
+    line-height: 0;
+    margin-left: 20px;
+    font-family: Inter;
+    margin-top: 10px;
+}
+.application_position{
+    margin-bottom: 12px;
+    font-family: Inter;
+    font-size: 20px;
+    color: #638ed4;
+}
+.new-application-content-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.new-application-content-container span{
+    display: flex;
+    align-items: center;
+}
+.location-icon, .date-icon, .type-icon{
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #80a1d6;
+    margin-right: 10px;
+}
+
+.new-application-content-container button{
+    padding: 10px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-family: Inter;
+}
+.edit-btn{
+    background-color: rgb(59, 216, 59);
+}
+.delete-btn{
+    background-color: rgba(255, 0, 0, 0.534);
+}
+.status-btn{
+    background-color: orange;
+}
+.date-added{
+    font-size: 18px;
+}

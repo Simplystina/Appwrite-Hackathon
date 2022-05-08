@@ -13,7 +13,7 @@ function App() {
             <Route path='/' element={ <UserProvider><LandingPage/></UserProvider>}/>
             <Route path='/login' element={<Register/>}/>
             <Route  path='/dashboard' element={<UserProvider><Dashboard/></UserProvider>}>
-              <Route index element={<Overview/>}/>
+              <Route path='overview' index element={<Overview/>}/>
               <Route  path='applications' element={<Applications/>}/>
               <Route  path='feeds' element={<Feeds/>}/>
               <Route  path='account' element={<AccountProfile/>} />
