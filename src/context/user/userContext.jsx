@@ -24,7 +24,7 @@ const UserProvider = ({children})=>{
             }
         })
         return unsuscribe
-    })
+    },[])
 
 //get currently logged in user
     useEffect(()=>{

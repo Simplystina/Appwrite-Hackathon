@@ -4,6 +4,7 @@ import { LandingPage, Register, Dashboard, Applications, Feeds, AccountProfile} 
 import './index.css'
 import UserProvider from './context/user/userContext';
 import { Overview } from './components/Index';
+import ApplicationProvider from './context/application/applicationContext';
 function App() {
   return (
     <>
@@ -14,7 +15,7 @@ function App() {
             <Route path='/login' element={<Register/>}/>
             <Route  path='/dashboard' element={<UserProvider><Dashboard/></UserProvider>}>
               <Route path='overview' index element={<Overview/>}/>
-              <Route  path='applications' element={<Applications/>}/>
+              <Route  path='applications' element={<ApplicationProvider><Applications/></ApplicationProvider>}/>
               <Route  path='feeds' element={<Feeds/>}/>
               <Route  path='account' element={<AccountProfile/>} />
             </Route>
