@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {AiOutlineAlignCenter} from 'react-icons/ai'
+import {MdFilterList} from 'react-icons/md'
 import NewApplication from './NewApplication'
 
 const AllApplications = () => {
@@ -14,7 +14,7 @@ const AllApplications = () => {
   return (
       <>
       <div className='application_search_container'>
-          <div onClick={showSearch} className='display-searchfield'><h4>Search <AiOutlineAlignCenter className='search-icon'/></h4></div>
+          <div onClick={showSearch} className='display-searchfield'><h4>Search <MdFilterList className='search-icon'/></h4></div>
           {showSearchField && <div className='application_form_container'>
                <form className='form'>
                   <label>Search</label>
