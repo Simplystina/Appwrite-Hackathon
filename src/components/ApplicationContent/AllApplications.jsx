@@ -1,10 +1,17 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import {MdFilterList} from 'react-icons/md'
+import { ApplicationContext } from '../../context/application/applicationContext'
 import NewApplication from './NewApplication'
+
 
 const AllApplications = () => {
 
+    // const applications = useContext(ApplicationContext) //application data pulled for building ui
+
     const [showSearchField, setShowSearchField] = useState(false)
+
+
+    
 
 
     const showSearch = ()=>{

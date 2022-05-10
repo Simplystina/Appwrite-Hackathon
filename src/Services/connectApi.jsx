@@ -18,6 +18,55 @@ export const database = sdk.database
 
 
 
+
+//functions for handling documents
+
+// creating applications
+export const createApplication = async (applicationData) =>{
+    const user = await account.get()
+    try{
+        await database.createDocument('62796c46a1d51a29c370', 'unique()',applicationData,[`user:${user['$id']}`],[`user:${user['$id']}`]);
+    }catch(e){
+        console.log(e.message)
+        if(e.code ===401){
+            console.log('error you are not allowed to perform this operation')
+        }
+    }
+}
+
+
+//read all applications for a user
+export const getApplications = async ()=>{
+  try{
+     return await database.listDocuments('62796c46a1d51a29c370')
+  }
+  catch(error){
+      console.log(error.code,error.message)
+  }
+}
+
+
+//updating a user apllication
+export const updateDocument  = async  (collecectionId, documentID,updatedData) => {
+    try{
+        await database.updateDocument(collecectionId,documentID,updatedData)
+    }catch(e){
+        console.log(e.code,e.message)
+    }
+}
+
+
+//deleting a user application
+export const deleteDocument  = async  (collecectionId, documentID) => {
+    try{
+        await database.deleteDocument(collecectionId,documentID)
+    }catch(e){
+        console.log(e.code,e.message)
+    }
+}
+
+
+
 //function for fecthing currently authenticated user
 export const getCurrentUser = async () => {
      const newUser =  await account.get() //get newly authenticated user
