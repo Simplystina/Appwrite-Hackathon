@@ -7,7 +7,7 @@ import {AiTwotoneEdit} from 'react-icons/ai'
 
 const NewPost = () => {
 
-  const [isOptionsOpen, setIsOptionsOpen] = useState(true)
+  const [isOptionsOpen, setIsOptionsOpen] = useState(false)
   const showOptions = ()=>{
      setIsOptionsOpen(!isOptionsOpen)
   }
@@ -35,8 +35,7 @@ const NewPost = () => {
           A friend introduced me to tracker and it has been
         </p>
         <span className='post-love-count'><BsHeartFill className='love-icon'/> 25</span>
-      </div>
-      
+      </div> 
     </div>
     
   )

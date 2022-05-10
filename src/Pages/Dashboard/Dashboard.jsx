@@ -9,10 +9,11 @@ const Dashboard = () => {
   return (<>{
     
 token ? (<div>
-             <Navbar/>
-            <Sidebar/>
-         
-             <Outlet/>
+             <Sidebar/>
+            <div className='page-content' id="page-content">
+              <Navbar/>
+              <Outlet/>
+            </div>
         </div>):<Navigate to='/login'/>
 
   }</>)

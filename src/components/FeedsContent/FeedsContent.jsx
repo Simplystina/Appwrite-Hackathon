@@ -4,20 +4,30 @@ import {AiOutlinePicture} from 'react-icons/ai'
 import {FaPaperPlane} from 'react-icons/fa'
 import './NewPost'
 import NewPost from './NewPost'
+import FeedsBox from './FeedsBox'
 
 const FeedsContent = () => {
   return (
     <div className='feeds-container'>
+      <div className='feed-post-content'>
         <form className='feeds-form'>
             <input type='text' id='experience' name='experience' 
-             placeholder='Share your experiene........'
+             placeholder='Share your experience........'
             />
             <div className='feeds-icons-container'>
               <AiOutlinePicture className='feed-icon'/>
               <FaPaperPlane className='feed-icon'/>
             </div>
         </form>
-        <NewPost/> 
+        <div className='allpost-container'>      
+          <NewPost/>
+          <NewPost/>
+          <NewPost/>
+          <NewPost/>
+        </div>  
+      </div>
+      <FeedsBox/>
+      
     </div>
   )
 }

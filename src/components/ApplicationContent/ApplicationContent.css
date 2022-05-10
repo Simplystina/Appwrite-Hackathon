@@ -1,8 +1,7 @@
 .application_content_container{
-    background-color: #f0f4f8;
-    margin-left: 14rem;
     padding: 20px 30px;
-    height: 100%;
+    border-top: 1px solid #a6bfe8;
+    border-left: 1px solid #a6bfe8;
     
 }
 .application_content_heading{

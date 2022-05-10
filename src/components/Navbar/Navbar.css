@@ -1,13 +1,14 @@
 .navbar-container{
-    transition: all linear 2s !important;
-    background-color: white;
-    box-shadow: var(--light-shadow);
-    transition: 2s linear;
-    padding: 10px;
-    margin-left: 14rem;
-    height: 4rem;
-    display: flex;
-    justify-content: space-between;
+        transition: all linear 2s !important;
+        background-color: white;
+        box-shadow: var(--light-shadow);
+        transition: 2s linear;
+        padding: 10px;
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        
+    
 }
 .menu-icon{
     height: 30px;
