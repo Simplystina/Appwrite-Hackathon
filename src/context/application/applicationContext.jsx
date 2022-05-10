@@ -8,6 +8,7 @@ const updateApplication = (allApplications,updateApplication)=>{
        if(application['$id']===updateApplication['$id']){
            return updateApplication
        }
+       return application
     })
 }
 
@@ -24,31 +25,32 @@ export const ApplicationContext = createContext([])
 
 const ApplicationProvider = ({children}) => {
 
-
     const [applicationData,setApplications] = useState([])
 
+
+
+     //this subscribes to the document channel and listens to changes in documents
     useEffect(()=>{
-     const unsuscribe = sdk.subscribe('documents',data =>{ //this subscribes to the document channel and listens to changes in documents
-        if(data.event ==='database.documents.create'){
+     const unsuscribe = sdk.subscribe('documents',data =>{
+        if(data.event ==='database.documents.create'){//listens for create
             setApplications((state) => [...state,data.payload])
         }
-        else if(data.event ==='database.documents.update'){
+        else if(data.event ==='database.documents.update'){ //listens for updates
               setApplications((state) => updateApplication(state,data.payload))
         }
-        else if(data.event === 'database.documents.delete'){
+        else if(data.event === 'database.documents.delete'){//listens for delete
             setApplications((state) => removeApplication(state,data.payload))
         }
-
      })
-
        return unsuscribe
     },[])
    
 
+
     useEffect(
         ()=>{
             const getApplicationsData = async ()=>{
-                    const documents = await getApplications()
+                    const documents = await getApplications() //get application data on first mount
                     setApplications(documents)
             }
             getApplicationsData()

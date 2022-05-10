@@ -1,0 +1,26 @@
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+
+}
+.heading{
+    font-size:32px;
+    letter-spacing: -0.02em;
+   font-style: normal;
+   font-weight: 600;
+}
+
+.btn{
+    height: 50px;
+    width: 128px;
+    background-color: #364DD9;
+    font-size:16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
