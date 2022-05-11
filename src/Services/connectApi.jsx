@@ -25,7 +25,7 @@ export const database = sdk.database
 export const createApplication = async (applicationData) =>{
     const user = await account.get()
     try{
-        await database.createDocument('62796c46a1d51a29c370', 'unique()',applicationData,[`user:${user['$id']}`],[`user:${user['$id']}`]);
+        await database.createDocument('627ba4875a25e3bc71d9', 'unique()',applicationData,[`user:${user['$id']}`],[`user:${user['$id']}`]);
     }catch(e){
         console.log(e.message)
         if(e.code ===401){
@@ -38,7 +38,7 @@ export const createApplication = async (applicationData) =>{
 //read all applications for a user
 export const getApplications = async ()=>{
   try{
-     return await database.listDocuments('62796c46a1d51a29c370')
+     return await database.listDocuments('627ba4875a25e3bc71d9')
   }
   catch(error){
       console.log(error.code,error.message)

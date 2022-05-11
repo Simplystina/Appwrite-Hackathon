@@ -28,8 +28,8 @@ const LandingPage = () => {
                 </p>
               { user?(
                   <>
-                      <h2>Welcome to Tracker {user.name}</h2>
-                      <Link className='btn landingpage-inner-contents-btn' to='/dashboard'>View Dashboard</Link>
+                      <h2>Welcome to Jobster {user.name}</h2>
+                      <Link className='btn landingpage-inner-contents-btn' to='/dashboard/overview'>View Dashboard</Link>
                   </>
               )
               : <Link className='btn landingpage-inner-contents-btn' to='/login'>Login/Register</Link>}

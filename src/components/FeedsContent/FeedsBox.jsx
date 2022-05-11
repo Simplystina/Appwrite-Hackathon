@@ -1,7 +1,7 @@
 import React from 'react'
-import {FiArrowUpRight, FiArrowDownRight} from 'react-icons/fi'
+// import {FiArrowUpRight, FiArrowDownRight} from 'react-icons/fi'
 import {FaTwitch, FaSlack, FaDropbox} from 'react-icons/fa'
-import {RiArrowRightSLine} from 'react-icons/ri'
+// import {RiArrowRightSLine} from 'react-icons/ri'
 import pattern from '../../images/feed-pattern.png'
 
 const FeedsBox = () => {

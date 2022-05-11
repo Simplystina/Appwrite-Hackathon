@@ -1,4 +1,4 @@
-import React, { useState,useEffect} from 'react'
+import React, { useState,useEffect, useContext} from 'react'
 import './Overview.css'
 import {FiArrowUpRight, FiArrowDownRight} from 'react-icons/fi'
 import {FaTwitch, FaSlack, FaDropbox} from 'react-icons/fa'
@@ -7,50 +7,58 @@ import { BarChart } from '../Index'
 // import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import SkeletonComponent from '../Skeleton/skeletonComponent'
+import { ApplicationContext } from '../../context/application/applicationContext'
+
+
+const findStat = (applicationData,stat) => (applicationData.reduce((acc,application)=>{
+        if(application.status === stat) {
+           return acc+1
+        }
+        return acc+0
+    },0)
+)
 
 
 
-const Overview = () => {
+const Overview = () => { 
+    const {applicationData} = useContext(ApplicationContext)
   
-
+ 
   const [isApplicationEmpty, setIsApplicationEmpty] = useState(true) //displays chart only when application list is not empty
 
   useEffect(() =>{
-   
     setTimeout(()=>{
         setIsApplicationEmpty(false)
     },1000)
-
-
   })
 
 
   return (
     <div className='dashboard-overview'>
-         {/* <ToastContainer autoClose={2000} position="top-center" /> */}
-      {isApplicationEmpty? <SkeletonComponent/>:(
+      
+      {isApplicationEmpty && !(applicationData)? <SkeletonComponent/>:(
       <><h2 className='overview-text'>Overview</h2>
        <div className='overview-stats-container'>
            <div className='overview-stats'>
-               <span className='overview-stats-count'>54</span>
+               <span className='overview-stats-count'>{applicationData.length}</span>
                <p className='overview-stats-text1'>Total applications</p>
                <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/> 0.2%</div>
                <p className='overview-stats-text2'>compared to others</p>
            </div>
            <div className='overview-stats'>
-               <span className='overview-stats-count'>27</span>
+               <span className='overview-stats-count'>{findStat(applicationData,'Pending')}</span>
                <p className='overview-stats-text1'>Pending applications</p>
                <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/> 0.2%</div>
                <p className='overview-stats-text2'>compared to last month</p>
            </div>
            <div className='overview-stats'>
-              <span className='overview-stats-count'>11</span>
-               <p className='overview-stats-text1'>Interviews scheduled</p>
+              <span className='overview-stats-count'>{findStat(applicationData,'Accepted')}</span>
+               <p className='overview-stats-text1'>Accepted</p>
                <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/> 7.4%</div>
                <p className='overview-stats-text2'>compared to last month</p>
            </div>
            <div className='overview-stats'>
-               <span className='overview-stats-count'>34</span>
+               <span className='overview-stats-count'>{findStat(applicationData,'Declined')}</span>
                <p className='overview-stats-text1'>Jobs declined</p>
                <div className='overview-stats-percent red'><FiArrowDownRight className='arrow-up'/> 10.5%</div>
                <p className='overview-stats-text2'>compared to last month</p>
