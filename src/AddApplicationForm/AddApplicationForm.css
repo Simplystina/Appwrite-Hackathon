@@ -20,8 +20,7 @@
     width: 40%; /* Could be more or less, depending on screen size */
     transition: all 0.3s ease-out;
     padding-bottom: 20px;
-    height: 80vh;
-    overflow-y: scroll;
+    
     
   }
 
@@ -43,7 +42,11 @@
       font-size: 20px;
   }
 
-  
+  .all-forms-container{
+      padding-top: 30px;
+      height: 60vh;
+      overflow-y: scroll;
+  }
   .form{
       display: flex;
       flex-direction: column;
@@ -71,9 +74,7 @@
       border-radius: 6px;
       padding: 15px;
   }
-  .first-form{
-      padding-top: 30px;
-  }
+  
   .add-application-btn-container{
       width: 100%;
       display: flex;

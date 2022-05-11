@@ -2,15 +2,21 @@ import React from 'react'
 import './AddApplicationForm.css'
 import {MdOutlineClose} from 'react-icons/md'
 
-const AddApplicationForm = () => {
+const AddApplicationForm = ({showModal}) => {
+
+    const closeModal = ()=>{
+        showModal(false)
+    }
+
   return (
     <div id="myModal" class="modal">
         <div className='modal-content'>
              <div className='modal-heading'>
                  <p>Add Job</p>
-                 <MdOutlineClose className='close-icon'/>
+                 <MdOutlineClose onClick={closeModal} className='close-icon'/>
              </div>
-             <form className='form first-form'>
+            <div className='all-forms-container'>
+             <form className='form'>
                  <label>Application Category</label>
                  <select>
                      <option>Product Design</option>
@@ -40,6 +46,8 @@ const AddApplicationForm = () => {
                  <button className='clear-form'>clear</button>
                  <button className='update-form'>update</button>
              </div>
+             </div>
+             
         </div>
     </div>
   )
