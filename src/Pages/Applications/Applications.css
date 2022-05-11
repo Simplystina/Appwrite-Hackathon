@@ -1,0 +1,8 @@
+
+    .container{
+        background-color: #f0f4f8;
+        margin-left: 0rem;
+        min-height: calc(100vh - 4rem);
+        display: block;
+        padding: 20px 70px;
+    }

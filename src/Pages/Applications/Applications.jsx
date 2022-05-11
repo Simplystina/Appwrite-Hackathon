@@ -1,10 +1,14 @@
 import React from 'react'
-import {  ApplicationContent } from '../../components/Index'
+import ApplicationsComponent from '../../components/Applications/applicationsComponent'
+import './Applications.css'
+
 
 const Applications = () => {
   return (
     <>
-      <ApplicationContent/>
+      <div className="container">
+         <ApplicationsComponent/>
+      </div>
     </>
   )
 }
