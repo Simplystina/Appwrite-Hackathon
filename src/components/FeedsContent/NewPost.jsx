@@ -34,7 +34,7 @@ const NewPost = () => {
           Since I started job searching keeping track of jobs I have applied to has been very hard. 
           A friend introduced me to tracker and it has been
         </p>
-        <span className='post-love-count'><BsHeartFill className='love-icon'/> 25</span>
+
       </div> 
     </div>
     
