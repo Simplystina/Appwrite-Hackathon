@@ -14,7 +14,7 @@ const updateApplication = (allApplications,updateApplication)=>{
 
 
 //helper function for handling delete 
-const removeApplication = (allApplications,deletedApplication)=> allApplications.filter(application => application['$id']===deletedApplication['$id'])
+const removeApplication = (allApplications,deletedApplication)=> allApplications.filter(application => application['$id']!==deletedApplication['$id'])
 
 
 
@@ -26,6 +26,8 @@ export const ApplicationContext = createContext([])
 const ApplicationProvider = ({children}) => {
 
     const [applicationData,setApplications] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+
 
 
 
@@ -33,7 +35,9 @@ const ApplicationProvider = ({children}) => {
     useEffect(()=>{
      const unsuscribe = sdk.subscribe('documents',data =>{
         if(data.event ==='database.documents.create'){//listens for create
-            setApplications((state) => [...state,data.payload])
+            console.log(data.payload)
+            
+            setApplications((applicationData) => [...applicationData,data.payload])
         }
         else if(data.event ==='database.documents.update'){ //listens for updates
               setApplications((state) => updateApplication(state,data.payload))
@@ -50,14 +54,14 @@ const ApplicationProvider = ({children}) => {
     useEffect(
         ()=>{
             const getApplicationsData = async ()=>{
-                    const documents = await getApplications() //get application data on first mount
+                    const {documents} = await getApplications() //get application data on first mount
                     setApplications(documents)
+                    setIsLoading(false)
             }
             getApplicationsData()
-        },[])
-   
+        },[]) 
 
-    return <ApplicationContext.Provider value={applicationData}>{children}</ApplicationContext.Provider>
+    return <ApplicationContext.Provider value={{applicationData,isLoading}}>{children}</ApplicationContext.Provider>
 }
 
 export default ApplicationProvider

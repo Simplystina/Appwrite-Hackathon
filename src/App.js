@@ -14,7 +14,7 @@ function App() {
             <Route path='/' element={ <UserProvider><LandingPage/></UserProvider>}/>
             <Route path='/login' element={<Register/>}/>
             <Route  path='/dashboard' element={<UserProvider><Dashboard/></UserProvider>}>
-              <Route path='overview' index element={<Overview/>}/>
+              <Route path='overview' index element={<ApplicationProvider><Overview/></ApplicationProvider>}/>
               <Route  path='applications' element={<ApplicationProvider><Applications/></ApplicationProvider>}/>
               <Route  path='feeds' element={<Feeds/>}/>
               <Route  path='account' element={<AccountProfile/>} />
