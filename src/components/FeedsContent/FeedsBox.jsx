@@ -5,6 +5,8 @@ import {RiArrowRightSLine} from 'react-icons/ri'
 import pattern from '../../images/feed-pattern.png'
 
 const FeedsBox = () => {
+
+    
   return (
     <div className='feedbox-content-container'>
         <div className='feedbox-img-container'>
@@ -32,6 +34,7 @@ const FeedsBox = () => {
             </div>
             <button className='boxfeed-btn'>Show More</button>
             <h3>Tell A Friend About Tracker</h3>
+            <p>Let’s help you stay on top of all your job applications</p>
         </div>
         
     </div>
