@@ -2,6 +2,7 @@ import './applicationsStyles.css'
 import {FaPlus} from 'react-icons/fa'
 import SearchComponent from '../SearchApplications/searchApplicationsComponent'
 import ApplicationResults from '../ApplicationResult/applicationsResultComponent'
+import AddApplicationForm from '../../AddApplicationForm/AddApplicationForm'
 
 const ApplicationsComponent= ()=>{
 
@@ -13,6 +14,7 @@ const ApplicationsComponent= ()=>{
             </header>
             <SearchComponent/>
             <ApplicationResults/>
+            <AddApplicationForm/>
             </>
         
     )
