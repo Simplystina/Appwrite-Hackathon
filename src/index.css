@@ -178,3 +178,12 @@ ul {
   color: var(--primary-200);
   background: var(--primary-700);
 }
+
+.float{
+  display: flex;
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
+}

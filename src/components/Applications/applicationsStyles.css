@@ -12,15 +12,18 @@ header{
    font-weight: 600;
 }
 
-.btn{
+.btn-search{
     height: 50px;
     width: 128px;
     background-color: #364DD9;
+    color: #fff;
+    border:none;
     font-size:16px;
     font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    cursor: pointer;
 }
 
 

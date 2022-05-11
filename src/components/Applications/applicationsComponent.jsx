@@ -9,7 +9,7 @@ const ApplicationsComponent= ()=>{
     return (<>
             <header>
                 <h2 className="heading">All Jobs</h2>
-                <button className="btn btn-primary"><FaPlus/> Add job</button>
+                <button className="btn-search"><FaPlus/> Add job</button>
             </header>
             <SearchComponent/>
             <ApplicationResults/>
