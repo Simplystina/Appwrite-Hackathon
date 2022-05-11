@@ -1,6 +1,6 @@
 import React from 'react'
 import './Sidebar.css'
-import logo from '../../images/TRACKER.png'
+import logo from '../../images/Trackerlogo.png'
 import {IoMdStats} from 'react-icons/io'
 import {MdQueryStats,MdOutlinePostAdd} from 'react-icons/md'
 import {ImProfile} from 'react-icons/im'
