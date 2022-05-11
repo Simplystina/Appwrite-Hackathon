@@ -14,7 +14,7 @@ const NewPost = () => {
   return (
     <div className='new_post_container'>
       <div className='new-post-heading'>
-        <span><img className='post-image' src={person}/></span>
+        <span><img className='post-image' src={person} alt='post'/></span>
         <div className='new-post-title'>
           <h4>CodewarsFX</h4>
           <div>
