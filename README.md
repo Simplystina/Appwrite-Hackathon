@@ -1,4 +1,4 @@
-# Debt Fix ✔
+# Tracker ✔
 
 ## This is our solution for the  [Appwrite 2022 Hackathon on Dev](https://dev.to/devteam/announcing-the-appwrite-hackathon-on-dev-1oc0)
 
