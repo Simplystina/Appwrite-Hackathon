@@ -7,7 +7,8 @@ We had quite alot of fun building this project within the timeframe stipulated f
 ## About
 
 The appwrite hackathon has four different categories that participants are allowed to provide solution to. 
-The most key feature is to integrate app write as the backend service for the application.
+My team and I worked on the Web2 Wizard category. This category focuses on building an application using any of Appwrite’s tools that services the internet as we know it today and its users
+The most key feature of the hackathon is to integrate app write as the backend service for the application.
 
 My team and I developed a solution called Tracker. 
 
