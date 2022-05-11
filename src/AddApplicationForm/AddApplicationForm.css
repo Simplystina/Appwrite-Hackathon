@@ -8,7 +8,7 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: #abc0d43a; /* Black w/ opacity */
+    background-color: #1c23293a; /* Black w/ opacity */
     transform: scale(1.15);
     
   }
@@ -16,24 +16,23 @@
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 10% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     width: 40%; /* Could be more or less, depending on screen size */
     transition: all 0.3s ease-out;
     padding-bottom: 20px;
-    
-    
   }
 
   .modal-heading{
       display: flex;
       justify-content: space-between;
-      background: #000000;
+      background:rgb(54, 77, 217);
       color: white;
-      padding: 20px;
+      padding: 10px;
   }
 
   .modal-heading p{
      margin:  10px;
+     margin-bottom: 0;
   }
   .close-icon{
       border: 1px solid white;
@@ -43,15 +42,19 @@
   }
 
   .all-forms-container{
-      padding-top: 30px;
-      height: 60vh;
-      overflow-y: scroll;
+      padding: 30px 30px 0;
+     
   }
   .form{
       display: flex;
       flex-direction: column;
-      padding: 8px 30px;
   }
+   
+  .form:not(:first-child){
+      margin-top: 30px;
+  }
+
+
   .form select{
       padding: 13px;
       outline: none;
@@ -60,19 +63,23 @@
       border-radius: 6px;
   }
 
+  .toast{
+      margin-top: 3em;
+  }
+
   .form label{
     font-family: Inter;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0em;
     text-align: justified;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
   .form input{
       width: 100%;
       border-radius: 6px;
-      padding: 15px;
+      padding: 15px 15px;
   }
   
   .add-application-btn-container{
@@ -90,6 +97,7 @@
       border: 1px solid rgb(54, 77, 217);
       color:rgb(54, 77, 217) ;
       outline: none;
+      cursor: pointer;
       background-color: white;
   }
 
@@ -101,4 +109,5 @@
     color: white;
     border: none;
     outline: none;
+    cursor: pointer;
 }

@@ -19,8 +19,9 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #FF3D00;
+    background-color: #0052FF;;
 }
+
 .result_center{
     margin-top: 14px;
 }
@@ -54,9 +55,9 @@
 }
 .result_bottom_paragraph span{
     padding: 6px 9px;  
-    background: rgba(255, 61, 0, 0.16);
+    background: #D6E3FF;
     border-radius: 2px;
-    color:#FF3D00;
+    color:#0052FF;;
     margin-left: auto;
 }
 

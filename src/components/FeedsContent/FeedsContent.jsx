@@ -21,6 +21,12 @@ const FeedsContent = () => {
       setmessage(e.target.value)
   }
 
+  // const handleSubmit = (e) => {
+  //    e.preventDefault()
+
+   
+  // }
+
 
   console.log(post)
   return (
