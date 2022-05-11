@@ -4,7 +4,7 @@ import Result from '../Result/resultComponent';
 
 
 const ApplicationResults = ()=>{
-    return(
+    return (
         <section className="application-results">
             <Result/>
         </section>
