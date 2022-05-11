@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Tracker ✔
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This is our solution for the  [Appwrite 2022 Hackathon on Dev](https://dev.to/devteam/announcing-the-appwrite-hackathon-on-dev-1oc0)
 
-## Available Scripts
+We had quite alot of fun building this project within the timeframe stipulated for it.
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+The appwrite hackathon has four different categories that participants are allowed to provide solution to. 
+My team and I worked on the Web2 Wizard category. This category focuses on building an application using any of Appwrite’s tools that services the internet as we know it today and its users.
+The most key feature of the hackathon is to integrate app write as the backend service for the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My team and I developed a solution called Tracker. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Problem statement
+Alot of times we tend to write down application on journal and sometimes, we tend to forget to push out those applications. Sometimes we add it to google calendar but alot of times we get overwhelmed with trying to keep up with all the applications added. At the end of the year most times, we look back at our growth and try to reflect on the job applications and events or fellowships we've applied to and sometimes we give an estimated number. Won't it be nice to actually have the correct figures of all these? 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Solution
+That is the main goal of tracker. A web app that enables user to keep track of their applications. 
+It also enables users to add their applications and keep track of them. Tracker helps users to store their applications and ensure that they get back to them through timely email reminders (though this is still a feature in progress at the moment). 
 
-### `npm run build`
+### Future Integrations
+No product is ever built in a day and awesome products that addresses users needs goes through updates regularly. As regards that, we've plans of improving our products and we'll accept pull requests on solutions that addresses any of the issues below as that is our next target goal.
+* timely email reminders to users
+* allowing users to subscribe to emails
+* improving the feeds section of our application
+* integrating in and out of google calendar to enable users to fix calendar invites whenever they want to
+* sending related articles to users based on the kind of application they have saved on their dashboard
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Architecture
+The backend was deisgned with appwrite as that is the main goal of the hackathon.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Technologies used
+* Front end : React.js and CSS
+* Back end: AppWrite services
+* Database: Appwrite database deisgn tools
+* DigitalOcean: Used to host appWrite server
+* Deployment: Netlify 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Important links
+* [Figma Link](https://www.figma.com/file/U0qX0OsTmLoaPI4uwxyDe2/AppWrite-Hackathon?node-id=5%3A3)
+* [Main App]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Team
+* [Chidinma Nwatu](https://github.com/Simplystina)
+* [Chidera Innocent](https://github.com/Codewarsfx)
+* Rhoda

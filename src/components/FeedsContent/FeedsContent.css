@@ -54,6 +54,7 @@
     border-bottom: 1px solid #abc0d4;
     width: 100%;
     padding: 30px;
+    position: relative;
 }
 
 .post-image{
@@ -109,34 +110,37 @@
 .post-options{
     position: absolute;
     right: 7%;
-    padding: 1.3rem 3rem;
+    padding: 0rem 1rem;
     background-color: white;
-    bottom: 31%;
+    bottom: 40%;
+    border: 1px solid #a6bfe8ac;
+    border-radius: 8px;
+    box-shadow: var(--shadow-3);
 }
 .post-options span{
-    
-    font-size: 15px;
     font-family: Inter;
     font-weight: 200;
     cursor: pointer;
-    margin: 10px auto;
     display: flex ;
+    align-items: center;
     border-bottom: 1px solid #abc0d4;
-    padding-top: -10px;
     line-height: 0;
+    margin: 20px auto;
 }
 .post-options p{
-    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: Inter;
+    font-size: 14px;
 }
 .delete-post{
     color: rgba(255, 0, 0, 0.742);
-    font-size: 20px; 
+    font-size: 14px; 
     margin-right: 10px;
 }
 
 .edit-post{
     color: rgba(0, 128, 0, 0.61);
-    font-size: 20px;
+    font-size: 14px;
     margin-right: 10px;
 }
 
