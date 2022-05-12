@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './LandingPage.css'
-import logo from '../../images/logo.svg'
+//import logo from '../../images/logo.svg'
+import logo from '../../images/Trackerlogo.png'
 import main from '../../images/main.svg'
 import { Link } from 'react-router-dom'
 
@@ -20,14 +21,14 @@ const LandingPage = () => {
         <nav className='landingpage-navbar'><img src={logo} alt='logo'></img></nav>
         <div className='landingpage-content'>
             <div className='landingpage-inner-contents'>
-                <h1>Job <span>Tracking</span> App</h1>
+                <h1><span>Application Tracker</span></h1>
                 <p>We're here to help you keep track of your job application
                     till forever. Interested in keeping track of your applications?
                     Click the link below to get started.
                 </p>
               { user?(
                   <>
-                      <h2>Welcome to Jobster {user.name}</h2>
+                      <h2>Welcome to Tracker {user.name}</h2>
                       <Link className='btn landingpage-inner-contents-btn' to='/dashboard/overview'>View Dashboard</Link>
                   </>
               )

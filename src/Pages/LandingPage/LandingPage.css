@@ -5,6 +5,11 @@
 .landingpage-navbar{
     margin: 20px 0 0 0;
 }
+.landingpage-navbar img{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
 .landingpage-content{
     display: flex;
     justify-content: space-between;
@@ -14,8 +19,8 @@
 }
 
 .landingpage-inner-contents-btn{
-
-    color: #000;
+    background-color: rgba(65, 105, 225, 0.934);
+    
 }
 
 .landingpage-inner-contents h1{
