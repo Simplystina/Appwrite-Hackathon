@@ -11,13 +11,13 @@ const SearchComponent = ({filteredData,handleChange,handleSearch})=>{
     const [search, setSearch] = useState('')
 
 
-    useEffect(()=>{
-        handleChange(filter)
-    },[filter])
+    useEffect(()=>{  //eslint-disable-line 
+        handleChange(filter)  //eslint-disable-line 
+    },[filter])  //eslint-disable-line 
 
-   useEffect(()=>{
-    handleSearch( search)
-   },[search])
+   useEffect(()=>{  //eslint-disable-line 
+    handleSearch( search)  //eslint-disable-line 
+   },[search])  //eslint-disable-line 
 
     const handleFilterChange =(e) =>{
         setFilter(e.target.value)

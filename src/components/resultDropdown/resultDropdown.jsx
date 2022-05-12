@@ -2,7 +2,7 @@ import './resultDropdown.css'
 import { RiPencilLine} from "react-icons/ri";
 import {HiOutlineTrash} from "react-icons/hi";
 import { deleteDocument } from '../../Services/connectApi';
-import {toast,ToastContainer } from 'react-toastify'
+import {ToastContainer } from 'react-toastify'
 
 const ResultDropdown =({id})=>{
     const handleDelete = async() =>{
