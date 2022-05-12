@@ -77,7 +77,7 @@ const ProfileUpdate = () => {
         <ToastContainer 
         autoClose={2000} position="top-center"/>
        <div className='profile-inner-container'>
-           <h2 className='profile-heading'>Profile</h2>
+           <h2 className='profile-heading'>Update Profile</h2>
            <div className='profile-form-container'>
                 <form className='form'>
                     <label>Full Name: {user.name} </label>
@@ -86,7 +86,7 @@ const ProfileUpdate = () => {
                     />
                 </form>
             
-                <form className='form'>
+                <form className='form email'>
                     <label>Email : {user.email}</label>
                     <input type='email' id='email' name='email' value={email}
                     placeholder='Enter your mail' onChange={(e)=> handleOnChange(e)}

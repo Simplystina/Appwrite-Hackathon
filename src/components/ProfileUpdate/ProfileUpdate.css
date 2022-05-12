@@ -1,8 +1,5 @@
 .profile-container{
     padding: 20px 30px;
-    border-top: 1px solid #a6bfe8;
-    border-left: 1px solid #a6bfe8;
-    
 }
 .profile-heading{
     font-family: Inter;
@@ -50,4 +47,8 @@
     width: 100%;
     margin: 2rem 0 0.5rem 0;
     background-color: #364DD9;
+}
+
+form.form.email{
+    margin-top: 0;
 }
