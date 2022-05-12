@@ -1,5 +1,5 @@
 import React, { useState,useEffect, useContext} from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Overview.css'
 import {FiArrowUpRight, FiArrowDownRight} from 'react-icons/fi'
 import {FaTwitch, FaSlack, FaDropbox} from 'react-icons/fa'
@@ -19,6 +19,7 @@ const findStat = (applicationData,stat) => (applicationData.reduce((acc,applicat
     },0)
 )
 
+const compare =(count)=> (count/50)*100
 
 
 const Overview = () => { 
@@ -43,31 +44,31 @@ const Overview = () => {
            <div className='overview-stats'>
                <span className='overview-stats-count'>{applicationData.length}</span>
                <p className='overview-stats-text1'>Total applications</p>
-               <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/> 0.2%</div>
+               <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/> {compare(applicationData.length)}%</div>
                <p className='overview-stats-text2'>compared to others</p>
            </div>
            <div className='overview-stats'>
                <span className='overview-stats-count'>{findStat(applicationData,'Pending')}</span>
                <p className='overview-stats-text1'>Pending applications</p>
-               <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/> 0.2%</div>
+               <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/> {compare(findStat(applicationData,'Pending'))}%</div>
                <p className='overview-stats-text2'>compared to last month</p>
            </div>
            <div className='overview-stats'>
               <span className='overview-stats-count'>{findStat(applicationData,'Accepted')}</span>
                <p className='overview-stats-text1'>Accepted</p>
-               <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/> 7.4%</div>
+               <div className='overview-stats-percent'><FiArrowUpRight className='arrow-up'/>{compare(findStat(applicationData,'Accepted'))}%</div>
                <p className='overview-stats-text2'>compared to last month</p>
            </div>
            <div className='overview-stats'>
                <span className='overview-stats-count'>{findStat(applicationData,'Declined')}</span>
                <p className='overview-stats-text1'>Jobs declined</p>
-               <div className='overview-stats-percent red'><FiArrowDownRight className='arrow-up'/> 10.5%</div>
+               <div className='overview-stats-percent red'><FiArrowDownRight className='arrow-up'/>{compare(findStat(applicationData,'Decline'))}%</div>
                <p className='overview-stats-text2'>compared to last month</p>
            </div>
        </div>
        <div className='overview-heading2'>
-          <h2>Top Recently Saved Applications</h2>
-          <button>see all</button>
+          <h2>Top Saved Applications</h2>
+          <Link to='/dashboard/applications'><button  style={{cursor: 'pointer'}}>see all</button></Link>
        </div>
        <div className='overview-topjob-container'>
            <div className='overview-topjob-content'>

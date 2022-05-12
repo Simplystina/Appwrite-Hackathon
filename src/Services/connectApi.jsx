@@ -108,7 +108,7 @@ export const signUpUser = async (name, email, password) => {
 //function for authenticating with google
 export const signUpWithGoogle = async () =>{
     try{
-        await account.createOAuth2Session('google', 'http://localhost:3000/dashboard','http://localhost:3000/login');
+        await account.createOAuth2Session('google', 'http://localhost:3000/dashboard/overview','http://localhost:3000/login');
         localStorage.setItem('auth_state', 1)
     }
     catch(e){
