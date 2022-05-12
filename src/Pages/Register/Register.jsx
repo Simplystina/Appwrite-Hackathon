@@ -71,7 +71,7 @@ const Register = () => {
                 console.log(error)
             }
             finally{
-                return navigate('/dashboard')
+                return navigate('/dashboard/overview')
             }
         }else if(!registeredStatus && email && password && name){
 
@@ -81,7 +81,7 @@ const Register = () => {
             try{
                 await signUpUser(name,email,password)
                 toast.success("Registration Successful")
-                navigate('/dashboard')
+                navigate('/dashboard/overview')
                 dispatch({
                     type: "status"})
             } catch(error){

@@ -1,5 +1,5 @@
 # Tracker ✔
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d4cf867d-19bb-4d84-a70b-90fe9b661106/deploy-status)](https://app.netlify.com/sites/trackerappwrite/deploys)
 ## This is our solution for the  [Appwrite 2022 Hackathon on Dev](https://dev.to/devteam/announcing-the-appwrite-hackathon-on-dev-1oc0)
 
 We had quite alot of fun building this project within the timeframe stipulated for it.
