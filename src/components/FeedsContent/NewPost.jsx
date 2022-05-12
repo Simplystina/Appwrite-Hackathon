@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import person from '../../images/person.png'
 import {BiDotsVerticalRounded} from 'react-icons/bi'
-import {BsHeartFill} from 'react-icons/bs'
 import {MdDelete} from 'react-icons/md'
 import {AiTwotoneEdit} from 'react-icons/ai'
 
