@@ -29,12 +29,12 @@ const LandingPage = () => {
               { user?(
                   <>
                       <h2>Welcome to Tracker {user.name}</h2>
-                      <Link className='btn landingpage-inner-contents-btn' to='/dashboard/overview'>View Dashboard</Link>
+                     <div className='landingpage-inner-contents-btn-container'><Link className='btn landingpage-inner-contents-btn' to='/dashboard/overview'>View Dashboard</Link></div> 
                   </>
               )
-              : <Link className='btn landingpage-inner-contents-btn' to='/login'>Login/Register</Link>}
+              : <div className='landingpage-inner-contents-btn-container'><Link className='btn landingpage-inner-contents-btn' to='/login'>Login/Register</Link></div>}
             </div>
-            <div>
+            <div className='landingPage-content-image'>
                 <img src={main} alt='hero'></img>
             </div>
         </div>

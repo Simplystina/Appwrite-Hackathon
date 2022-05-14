@@ -34,7 +34,7 @@ const ApplicationsComponent= ()=>{
     },[applicationData])
 
     const handleChange = (status) =>{
-               setFilteredData(filterApplicationData(status,applicationData)) // filter based on status
+          setFilteredData(filterApplicationData(status,applicationData)) // filter based on status
     }
 
     const handleSearch = (name) =>{

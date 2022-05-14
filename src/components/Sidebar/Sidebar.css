@@ -7,12 +7,23 @@
     top: 0;
     left: 0;
      transition: all 0.5s linear;
+     display: block;
   }
   .sidebar-logo{
-    margin: 20px 30px 40px 30px;
+    margin: 10px 10px 40px 10px;
     width: 7rem;
   }
-  
+  .sidebar-header{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .sidebar-close-icon{
+  font-size: 30px;
+  color: rgb(54, 77, 217);
+  margin-top: 20px;
+   display: none;
+  }
   
   .nav-links{
     border-radius: 6px;
@@ -58,6 +69,38 @@
    
   }
   .logout:hover{
-    background-color: rgb(54, 77, 217);
-     color: white;
+    color: rgb(54, 77, 217)!important;
+    background:#f0f4f8 !important;
   }
+
+  
+@media screen and (max-width:1006px) {
+    .side-bar{
+      z-index: 2;
+      box-shadow: var(--shadow-3);
+    }
+    .sidebar-close-icon{
+      display: block;
+    }
+}
+
+@media screen and (min-width:1006px) {
+  .side-bar{
+     width: 14rem !important;
+  }
+}
+
+@media screen and (min-width:520px) {
+  .side-bar{
+     width: 14rem !important;
+  }
+  .nav-links{
+    font-size: 13px;
+  }
+  .sidebar-logo{
+    margin: 10px 10px 40px 10px;
+    width: 5rem;
+  }
+
+}
+

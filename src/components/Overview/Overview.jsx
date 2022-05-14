@@ -95,7 +95,7 @@ const Overview = () => {
                </div>
                <div className='arrow-right'><RiArrowRightSLine /></div>
            </div>
-  </div>
+        </div>
   <BarChart/></>)
 }
     </div>

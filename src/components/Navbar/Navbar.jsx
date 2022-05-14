@@ -7,13 +7,30 @@ import { UserContext } from '../../context/user/userContext'
 
 const Navbar = () => {
 
+  const toggleSidebar = ()=>{
+    
+    if(window.innerWidth>1006){
+      if(document.getElementById("sidenav").style.width === "14rem"){
+        document.getElementById("sidenav").style.width = "0px";
+        document.getElementById("page-content").style.marginLeft= "0px";
+      }
+      else{
+        document.getElementById("sidenav").style.width = "14rem";
+        document.getElementById("page-content").style.marginLeft = "14rem";
+      }
+     
+    }else{
+      document.getElementById("sidenav").style.width = "14rem"
+      
+    }
   
+  }
   const {user} = useContext(UserContext)
   
 
   return (
     user && <div className='navbar-container'>
-        <AiOutlineMenuUnfold className='menu-icon'/>
+        <AiOutlineMenuUnfold onClick={toggleSidebar} className='menu-icon'/>
         <h2>Dashboard</h2>
         <div className='user-btn'>
             <img className='user-img' src={person} alt=""/>

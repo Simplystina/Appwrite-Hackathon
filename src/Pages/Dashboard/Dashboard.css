@@ -6,8 +6,13 @@
   transition: all 0.5s linear;
 }
 
-@media screen and (max-width:915px) {
+
+
+@media screen and (max-width:1006px) {
   #page-content{
-    margin-left: 0;
+      margin-left: 0;
   }
 }
+
+  
+
