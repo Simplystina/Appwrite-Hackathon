@@ -1,4 +1,4 @@
-.page-content{
+#page-content{
   background-color: #f0f4f8;
   margin-left: 14rem;
   height: 100vh;
@@ -10,7 +10,7 @@
 
 @media screen and (max-width:1006px) {
   #page-content{
-      margin-left: 0;
+      margin-left: 0 ;
   }
 }
 

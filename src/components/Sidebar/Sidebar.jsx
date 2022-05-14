@@ -1,4 +1,4 @@
-import React,{useEffect, useRef} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 import './Sidebar.css'
 import logo from '../../images/Trackerlogo.png'
 import {IoMdStats} from 'react-icons/io'
@@ -14,6 +14,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 const Sidebar = () => {
   const navigate = useNavigate()
 
+   const [isOpen, setIsOpen] = useState(true)
   const node = useRef();
 
   const handleLogOut = async () => {
@@ -21,7 +22,8 @@ const Sidebar = () => {
           navigate('/login')
   }
   const closeSidebar = ()=>{
-    document.getElementById("sidenav").style.width = "0px";
+    document.getElementById("sidenav").style.width = "0";
+    console.log('sidebar-clicked', document.getElementById('sidenav'))
   }
   const handleClick = e => {
     if(window.innerWidth <=1006 ){
@@ -48,10 +50,10 @@ useEffect(() => {
         
 
   return (
-   <aside ref={node}  className='side-bar' id='sidenav'>
+   <aside ref={node}  style={{width:'14rem'}} className='side-bar' id='sidenav'>
        <div className='sidebar-header'>
           <Link to='/'><img className='sidebar-logo' src={logo} alt='logo'></img></Link>
-          <AiOutlineClose onClick={closeSidebar}  className='sidebar-close-icon'/>
+         <span onClick={closeSidebar}><AiOutlineClose  className='sidebar-close-icon'/></span>
         </div>
        <ul className='sidebar-links'>
           <li> <NavLink className="nav-links" to='/dashboard/overview'  style={({ isActive }) => ({ background: isActive ? "rgb(54, 77, 217)" : "none" , color: isActive? 'white':"#5C6578"})}><IoMdStats className='links-icon'/> Overview</NavLink></li>

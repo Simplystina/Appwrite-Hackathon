@@ -79,26 +79,26 @@ const ProfileUpdate = () => {
        <div className='profile-inner-container'>
            <h2 className='profile-heading'>Update Profile</h2>
            <div className='profile-form-container'>
-                <form className='form'>
+                <form className='update-users-form'>
                     <label>Full Name: {user.name} </label>
                     <input type='text' id='name' name='name' value={name}
                     placeholder='Enter your name' onChange={(e)=> handleOnChange(e)}
                     />
                 </form>
             
-                <form className='form email'>
+                <form className='update-users-form'>
                     <label>Email : {user.email}</label>
                     <input type='email' id='email' name='email' value={email}
                     placeholder='Enter your mail' onChange={(e)=> handleOnChange(e)}
                     />
                 </form>
-                <form className='form'>
+                <form className='update-users-form'>
                     <label>New Password</label>
                     <input id='password' name='password' type='password' value={password}
                     placeholder='Create password' autoComplete='new password' onChange={(e)=> handleOnChange(e)}
                     />
                 </form>
-                <form className='form'>
+                <form className='update-users-form'>
                     <label>Current Password</label>
                     <input id='oldpassword' name='oldPassword' type='password' value={oldPassword}
                     placeholder='Enter your old password' autoComplete='new password' onChange={(e)=> handleOnChange(e)}

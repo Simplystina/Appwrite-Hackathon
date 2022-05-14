@@ -1,4 +1,4 @@
-import React, { useContext} from 'react'
+import React, { useContext, useState} from 'react'
 import './Navbar.css'
 import {AiOutlineMenuUnfold, AiFillCaretDown} from 'react-icons/ai'
 // import {BsPersonCircle} from 'react-icons/bs'
@@ -7,21 +7,20 @@ import { UserContext } from '../../context/user/userContext'
 
 const Navbar = () => {
 
+ 
   const toggleSidebar = ()=>{
-    
     if(window.innerWidth>1006){
       if(document.getElementById("sidenav").style.width === "14rem"){
-        document.getElementById("sidenav").style.width = "0px";
+        document.getElementById("sidenav").style.width = "0";
         document.getElementById("page-content").style.marginLeft= "0px";
       }
       else{
         document.getElementById("sidenav").style.width = "14rem";
         document.getElementById("page-content").style.marginLeft = "14rem";
       }
-     
+     return
     }else{
       document.getElementById("sidenav").style.width = "14rem"
-      
     }
   
   }

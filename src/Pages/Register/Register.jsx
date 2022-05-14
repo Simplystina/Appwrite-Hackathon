@@ -111,7 +111,7 @@ const Register = () => {
            <img src={logo} alt="logo" className='logo'/>
            <h2 className='registration-signup'>{registeredStatus? "Sign in" : "Sign up"}</h2>
           {!registeredStatus &&
-             <form className='form'>
+             <form className='registration-form'>
                 <label>Full Name</label>
                 <input type='text' id='name' name='name' value={name}
                 placeholder='Enter your name'
@@ -119,14 +119,14 @@ const Register = () => {
                 />
             </form>
             }
-            <form className='form'>
+            <form className='registration-form'>
                 <label>Email</label>
                 <input type='email' id='email' name='email' value={email}
                 placeholder='Enter your mail'
                 onChange={(e)=> handleOnChange(e)}
                 />
             </form>
-            <form className='form'>
+            <form className='registration-form'>
                 <label>Password</label>
                 <input id='password' name='password' type='password' value={password}
                 placeholder='Create password' autoComplete='new password'
