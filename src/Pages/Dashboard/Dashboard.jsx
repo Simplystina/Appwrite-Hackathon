@@ -1,5 +1,3 @@
-
-   
 import React from 'react'
 import './Dashboard.css'
 import { Sidebar, Navbar } from '../../components/Index'

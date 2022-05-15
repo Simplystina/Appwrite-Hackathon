@@ -1,4 +1,4 @@
-import React,{useEffect, useRef, useState} from 'react'
+import React,{useEffect, useRef} from 'react'
 import './Sidebar.css'
 import logo from '../../images/Trackerlogo.png'
 import {IoMdStats} from 'react-icons/io'
@@ -14,7 +14,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 const Sidebar = () => {
   const navigate = useNavigate()
 
-   const [isOpen, setIsOpen] = useState(true)
+   
   const node = useRef();
 
   const handleLogOut = async () => {
