@@ -14,7 +14,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 const Sidebar = () => {
   const navigate = useNavigate()
 
-   
+  //  const [isOpen, setIsOpen] = useState(true)
   const node = useRef();
 
   const handleLogOut = async () => {
