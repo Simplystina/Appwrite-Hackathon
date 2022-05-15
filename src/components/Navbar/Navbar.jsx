@@ -1,4 +1,4 @@
-import React, { useContext, useState} from 'react'
+import React, { useContext} from 'react'
 import './Navbar.css'
 import {AiOutlineMenuUnfold, AiFillCaretDown} from 'react-icons/ai'
 // import {BsPersonCircle} from 'react-icons/bs'
